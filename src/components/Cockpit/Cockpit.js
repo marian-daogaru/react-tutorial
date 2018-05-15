@@ -1,6 +1,8 @@
 import React from 'react'
 import classes from './Cockpit.css'
 import Aux from '../../hoc/Aux'
+
+
 const cockpit = (props) => {
   let btnClass = classes.Button
   if (props.showPersons) {
