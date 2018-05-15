@@ -15,7 +15,6 @@ const cockpit = (props) => {
     assignedClasses.push(classes.bold)
   }
 
-  console.log(btnClass, props.showPersons, 2222)
   return (
     <div className={classes.Cockpit}>
       <h1>Hi, Im the react app</h1>
