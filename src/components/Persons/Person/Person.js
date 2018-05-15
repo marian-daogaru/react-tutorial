@@ -16,7 +16,8 @@ class Person extends Component {
   }
 
   componentDidMount() {
-    console.log('PersoN.js componenet did mount')
+    console.log('PersoN.js componenet did mount222', Object.keys(this.inputElement), this.inputElement.focus)
+    this.inputElement.focus()
   }
 
   render() {
@@ -26,6 +27,7 @@ class Person extends Component {
         <p onClick={this.props.click}>Im a {this.props.name} and Im {this.props.age} yo</p>
         <p>{this.props.children}</p>
         <input
+          ref={(inp) => {this.inputElement = inp}}
           type='text'
           onChange={this.props.changed}
           value={this.props.name}
