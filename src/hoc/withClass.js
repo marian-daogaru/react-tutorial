@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Component} from 'react'
 
 // const withClass = (WrappedComponet, className) => {
 //   return (props) => (
@@ -6,7 +6,7 @@ import React from 'react'
 //       <WrappedComponet {...props}/>
 //     </div>
 //   )
-}
+// }
 
 const withClass = (WrappedComponet, className) => {
   return class extends Component {
