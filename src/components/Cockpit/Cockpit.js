@@ -1,10 +1,10 @@
 import React from 'react'
 import classes from './Cockpit.css'
-
+import Aux from '../../hoc/Aux'
 const cockpit = (props) => {
-  let btnClass = ''
+  let btnClass = classes.Button
   if (props.showPersons) {
-    btnClass = classes.Red
+    btnClass = [classes.Button, classes.Red].join(' ')
   }
 
   let assignedClasses = []
@@ -16,7 +16,7 @@ const cockpit = (props) => {
   }
 
   return (
-    <div className={classes.Cockpit}>
+    <Aux>
       <h1>Hi, Im the react app</h1>
       <p className={assignedClasses.join(' ')}>This is really working</p>
       <button
@@ -25,7 +25,7 @@ const cockpit = (props) => {
       >
         Switch me
       </button>
-    </div>
+    </Aux>
   )
 }
 
