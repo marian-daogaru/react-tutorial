@@ -39,6 +39,19 @@ class App extends Component {
     console.log('App.js componenet did mount')
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    console.log('App.js update inside should component update', nextProps, nextState)
+    return true
+  }
+
+  componentWillUpdate(nextPros, nextState) {
+    console.log('App.js inside componentWillUpdate')
+  }
+
+  componentDidUpdate() {
+    console.log('App.js inside componentDidUpdate')
+  }
+
   switchNameHandler = (newName) => {
     this.setState({
       persons: [
